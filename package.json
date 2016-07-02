@@ -1,0 +1,22 @@
+{
+  "name": "bts-server",
+  "version": "1.0.0",
+  "description": "First server app for BookThatSpot",
+  "main": "index.js",
+  "engines": {
+    "node": "0.12.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "akil aikman",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "express-jwt": "^3.4.0",
+    "mongoose": "^4.4.17",
+    "node-restful": "^0.2.5"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Book That Spot Server",
+  "description": "Restful server application for Book That Spot",
+  "keywords": [
+    "productivity",
+    "book that spot",
+    "server"
+  ],
+  "website": "www.bookthatspot.com",
+  "repository": "",
+  "logo": ""
+}
