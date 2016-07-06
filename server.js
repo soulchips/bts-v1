@@ -13,7 +13,10 @@ var jwtCheck = jwt({
 });
 
 //MongoDB
-mongoose.connect('mongodb://localhost/bts_data');
+var mongodbURI = process.env.MONGODB_URI;
+console.log(mongodbURI);
+//mongoose.connect('mongodb://localhost/bts_data');
+mongoose.connect('mongodb://dbadmin:AwetechDev1@ds019658.mlab.com:19658/bts_data');
 
 //Express
 var app = express();
