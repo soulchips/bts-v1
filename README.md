@@ -28,6 +28,7 @@ GET, PUT, POST, DELETE all work for the endpoints below
 
 
 POST only for these endpoints
+
 /api/customers/login
 /api/clients/search
 /api/schedule/search/
