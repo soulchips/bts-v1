@@ -30,7 +30,7 @@ app.get('/', function(req, res) {
 	res.send('api working');
 });
 
-app.use('/api', jwtCheck, require('./routes/api'));
+app.use('/api', require('./routes/api'));
 
 
 //Start Server
