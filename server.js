@@ -18,7 +18,6 @@ var jwtCheck = jwt({
 });
 
 //MongoDB
-//mongoose.connect('mongodb://localhost/bts_data');
 mongoose.connect('mongodb://demodbuser:demodbpassword@ds147599.mlab.com:47599/bts-demo');
 
 //Express

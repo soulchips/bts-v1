@@ -28,7 +28,7 @@ customer.methods(['get', 'put', 'post', 'delete']);
 customer.register(router, '/customers');
 
 business.methods(['get', 'put', 'post', 'delete']);
-business.register(router, '/businesses');
+business.register(router, '/clients');
 
 schedule.methods(['get', 'put', 'post', 'delete']);
 schedule.register(router, '/schedules');
