@@ -13,11 +13,17 @@ This is not a complete server app though. It is still in the works. It's just so
 #Available Endpoints
 
 GET, PUT, POST, DELETE all work for the endpoints below
+
 /api/customers
+
 /api/businesses
+
 /api/schedules
+
 /api/staff
+
 /api/categories
+
 /api/users
 
 
