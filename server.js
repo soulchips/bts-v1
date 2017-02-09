@@ -6,15 +6,20 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
+
+var auth0Secret = process.env.auth0Secret || 'place_secret_here';
+var auth0ClientID = process.env.auth0ClientID || 'place_clientID_here';
+
 //auth0 security
+// will require an auth0 account to be set up. visit https://auth0.com/ for more info
 var jwtCheck = jwt({
-	secret: new Buffer('1lJ5cdg4X_AKZ_tj81IldCt5rDFOzR0X04FvwSvTcRBqnbnmsWBrIfL0GNE5e7BZ', 'base64'),
-	audience: 'iIy5K1c0kTqHj5WlYBhK145zgn8lk1W0'
+	secret: new Buffer(auth0Secret, 'base64'),
+	audience: auth0ClientID
 });
 
 //MongoDB
 //mongoose.connect('mongodb://localhost/bts_data');
-mongoose.connect('mongodb://dbadmin:AwetechDev1@ds019658.mlab.com:19658/bts_data');
+mongoose.connect('mongodb://demodbuser:demodbpassword@ds147599.mlab.com:47599/bts-demo');
 
 //Express
 var app = express();
@@ -31,6 +36,8 @@ app.get('/', function(req, res) {
 });
 
 app.use('/api', require('./routes/api'));
+// app.use('/api', jwtCheck, require('./routes/api')); //uncomment this line to use auth0 JWT authentication.
+
 
 
 //Start Server
